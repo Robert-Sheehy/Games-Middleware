@@ -55,7 +55,15 @@ $$\mathbf{a} \cdot \mathbf{b} = \|\mathbf{a}\| \|\mathbf{b}\| \cos(\theta)$$
 *Note: The cross product is exclusively defined in **3D space**. It produces a **new vector** that is strictly perpendicular to both original vectors.*
 
 ### Algebraic Definition (Determinant Form)
-$$\mathbf{a} \times \mathbf{b} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{vmatrix}$$
+$$
+\mathbf{a} \times \mathbf{b} = 
+\begin{vmatrix} 
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 
+a_1 & a_2 & a_3 \\ 
+b_1 & b_2 & b_3 
+\end{vmatrix}
+$$
+
 
 Expanding the determinant gives:
 $$\mathbf{a} \times \mathbf{b} = (a_2b_3 - a_3b_2)\mathbf{i} - (a_1b_3 - a_3b_1)\mathbf{j} + (a_1b_2 - a_2b_1)\mathbf{k}$$
