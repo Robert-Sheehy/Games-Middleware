@@ -11,7 +11,7 @@ $\hat{n}$ Plane Normal ( plane.transform.up)
 
 $P_{p to s} = P_{s} - P_{p} $
 
-$P_{p to s} \cdot \hat{n}  $  Raw perpendicular "distance" from sphere centre to plane
+$P_{p to s} \cdot \hat{n}$  Raw perpendicular "distance" from sphere centre to plane
 
 $d_{1} = P_{p to s} \cdot \hat{n} - r $
 
@@ -21,11 +21,12 @@ Collision is detected if $d_{1} <0 $
 
 ### Note::  For efficiency
 We will have in the code for the sphere
-
+```csharp
 velocity += acceleration * Time.deltaTime;
 transform.position += velocity * Time.deltaTime;
-
+```
 so we cache them before adjusting 
+```csharp
 oldVelocity = velocity;
 oldPosition = transform.position;
 oldD1 = d0
@@ -33,7 +34,7 @@ oldD1 = d0
 
 velocity += acceleration * Time.deltaTime;
 transform.position += velocity * Time.deltaTime;
-
+```
 ### Calculate Time of Impact
 
 $P_{0}$ old position
