@@ -27,9 +27,9 @@ transform.position += velocity * Time.deltaTime;
 ```
 so we cache them before adjusting 
 ```csharp
-oldVelocity = velocity;
-oldPosition = transform.position;
-oldD1 = d0
+Vector3 oldVelocity = velocity;   // Local variable
+Vector3 oldPosition = transform.position;  // Local variable
+oldD1 = d0     // Global variable
 
 
 velocity += acceleration * Time.deltaTime;
@@ -66,9 +66,9 @@ $v_{impact out} = v_{\perp} - CoR * v_{\parallel} $
 ### Fast forward to current frame
 $T_{remaining} = T - T_{impact}$
 
-$v = v_{impact out} + a * T_{remaining}  $
+$v = v_{impact out} + a * T_{remaining}$   Here was assign the final velocity, i.e. the velocity vector in code
 
-$P = P_{impact} + v*T_{remaining} $
+$P = P_{impact} + v*T_{remaining}$          Here we assign the final position i.e. transform.position
 
 
 
