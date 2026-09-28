@@ -22,6 +22,37 @@ i.e. $n = (P_{2} - P_{1}).normalised$
 
 As with the sphere on plane calculations we decompose the velocity (in this case the velocities) into parallel and perpendicular components
 
+So $v_{1} = v_{1\parallel} + v_{1\perp}$
 
+and $v_{2} = v_{2\parallel} + v_{2\perp}$
 
+To resolve the collision we "reverse" the parallel and leave the perpendicular untouched
 
+Unlike the plane calculations, both spheres are moving so we have to use the conservation of momentum formulae to resolve
+
+<img width="695" height="215" alt="image" src="https://github.com/user-attachments/assets/f4f4a97e-82e4-4e4b-965a-7099eca61861" />
+
+Here we use the masses of our spheres and the parallel components of the velocities to calculate the resolved parallel components of the velocities of the spheres
+
+$v_{1\parallel}^{*}$  resultant paralell component (to n) of velocity of sphere 1 after collision
+
+$v_{2\parallel}^{*}$  resultant parallel component (to n) of velocity of sphere 1 after collision
+
+Overall velocities will be
+$v_{1}^{\*}$ = CoR * $v_{1\parallel}^{\*} + v_{1\perp}$
+Similarly for $v_{2}$
+
+##  Implementing Time of impact calculations
+
+Follow the logic as before
+
+$d_{1}$ will be $d - (r_{1} + r_{2})$ when the collision was detected
+$d_{0}$ was the same value calculated in the previous frame
+
+As before the following must be done:
+
+- calculate the Time of Impact (using the same formula as before)
+- Calculate positions, velocities at the time of impact
+- Resolve the vleocities at time of impact
+- Fast forward to present frame be calculating new postions and velocities
+  
